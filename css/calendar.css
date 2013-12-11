@@ -1,0 +1,54 @@
+#calendario{
+    position: absolute;
+    top:50px;
+    right:40px;
+}
+
+#calendario h2{
+    color:#000;
+    text-transform: uppercase;
+    margin:0 0 4px 0;
+    font-size: 14px;
+    text-align: left;
+    
+    font-family: 'simpleFont', Arial, Helvetica;
+    font-family: 'simpleFont', Arial, Helvetica;
+}
+
+#calendario #cal2{
+    margin-top: 50px;
+}
+
+#calendario tr.diasDaSemana td{
+    background:url(../img/diasDaSemana.png) center center no-repeat;
+    width:23px;
+    height:22px;
+    line-height:22px;
+    font-family: 'simpleFont', Arial, Helvetica;
+}
+
+#calendario tr.diasDaSemana td.fds{
+    background:url(../img/fds.png) center center no-repeat;
+      font-family: 'simpleFont', Arial, Helvetica;
+}
+
+#calendario td{
+    text-align: center;
+    font-size: 13px;
+    width:18px;
+    height:13px;
+    line-height:13px;
+      font-family: 'simpleFont', Arial, Helvetica;
+}
+
+#calendario td.day{
+    margin-top: 50px;
+      font-family: 'simpleFont', Arial, Helvetica;
+}
+
+#calendario td.day.today{
+    color:#fff;
+    font-weight:bold;
+    background-color: #FBAB18;
+      font-family: 'simpleFont', Arial, Helvetica;
+}

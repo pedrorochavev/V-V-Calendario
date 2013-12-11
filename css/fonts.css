@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'AvantGarde-Demi';
+	src: url('../fonts/avantgad.eot');
+	src: url('../fonts/avantgad.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/avantgad.woff') format('woff'),
+			 url('../fonts/avantgad.ttf') format('truetype'),
+			 url('../fonts/avantgad.svg#avantgad') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvantGarde-BookOblique';
+	src: url('../fonts/avantgbo.eot');
+	src: url('../fonts/avantgbo.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/avantgbo.woff') format('woff'),
+			 url('../fonts/avantgbo.ttf') format('truetype'),
+			 url('../fonts/avantgbo.svg#avantgbo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+ 
+
+
+@font-face {
+	font-family: 'simpleFont';
+	src: url('../fonts/simple__.eot');
+	src: url('../fonts/simple__.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/simple__.woff') format('woff'),
+			 url('../fonts/simple__.ttf') format('truetype'),
+			 url('../fonts/simple__.svg#avantgbo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

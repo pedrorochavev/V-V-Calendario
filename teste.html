@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Viriato & Viriato - Calendário 2013</title>
+        <meta name="description" content=""/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="user-scalable=no,width=device-width;height=device-height"/>
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+		
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png" /><!-- 57x57 -->
+        <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" />
+        
+		<script src="js/vendor/snowstorm-min.js"></script> 
+		<script>
+		/*
+			snowStorm.autoStart = false;
+			snowStorm.snowColor = '#fff';   // blue-ish snow!?
+			snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+			snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+		*/
+		</script>
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/vendor/snowstorm.js"></script>
+</head>
+
+<body style="background:#6699cc;font:100 1.75em helvetica neue, helvetica,arial,verdana,sans-serif;color:#fff">
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div id="countingDays"></div>
+		<div id="iOSPlayBtn"></div> 
+        <div id="mainContentDiv" class="main-content" style="background-color: red">  
+        	
+        	<div id="calendario">
+                <div id="cal1"></div>
+                <div id="cal2"></div>
+            </div>
+        	
+        	
+	         <div id="hiddenObjects">
+	        	<video poster="img/intro_frame.png" id="introVideo">
+					<source src="videos/open.mp4" type="video/mp4" />
+					<source src="videos/open.webm" type="video/webm" />
+				</video>
+	        	<video poster="img/frame_center.png" id="introLoop">
+	        		
+					<source src="videos/center.mp4" type="video/mp4" />
+					<source src="videos/center.webm" type="video/webm" />
+				</video>
+	        	<video poster="img/frame_center.png" id="introEnd">
+	        		
+					<source src="videos/dissolve.mp4" type="video/mp4" />
+					<source src="videos/dissolve.webm" type="video/webm" />
+				</video>
+	        </div>
+			<div id="episode1">
+				
+			</div> 
+			<div id="episode2">
+				
+			</div> 
+			<div id="episode3" style="overflow: hidden">
+				<div class="contentEpisode3 cam1">
+					
+				</div>
+				
+				<div class="contentEpisode3 cam2">
+					
+				</div>
+				
+			</div>
+			
+			<div id="episode4">
+				
+			</div>
+			
+			<div id="episode5">
+				
+			</div>  
+			
+			<div id="episode6">
+				
+			</div>  
+       	
+        	<canvas id="mainStage"></canvas>
+        	<canvas id="videoStage"></canvas>
+        	
+        </div>
+		<div id="navigationMenu">
+			<div class="navigationLeft">
+				<span>JANUARY</span>
+				<span>FEBRUARY</span>
+				
+			</div>
+			<div class="navigationCenter">
+				<div class="image">
+					<img src="img/2013.png" border="0" />
+				</div>
+				<div id="homeBtn" class="btn">HOME</div>
+			</div>
+			<div class="navigationRight">
+				<span>MARCH</span>
+				<span>APRIL</span>
+			</div>
+		</div>
+		
+		<div id="playVideoBtn"></div>
+		<div id="closeVideoBtn"></div>
+        
+        <div id="loading" class="loading-background">
+        	
+        	<div class="loader-container">
+        		
+				<div id="lastYear" class="loader-container-past">
+					<span>LAST<span class="demi">YEAR</span></span>
+				</div>
+				<div class="loader-container-center">
+					
+					<div class="loader-container-center-images">
+						<div class="imageItem"><img src="img/img1.png" style="margin-top: 40px;" border="0" /></div>
+						<div class="imageItem"><img src="img/img2.png" style="margin-top: 11px;" border="0" /></div>
+						<div class="imageItem"><img src="img/img3.png" style="margin-top: 42px;" border="0" /></div>
+						<div class="imageItem"><img src="img/img4.png" style="margin-top: 61px;" border="0" /></div>
+					</div>
+					<div class="loader-container-center-loadingbar">
+						<div id="barrinha" class="loader-container-center-loadingbar-barrinha"></div>
+					</div>
+					<div id="loaderText" class="loader-container-center-loadingtext">
+						Loading
+					</div> 
+					
+				</div>
+				<div id="nextYear" class="loader-container-future">
+					<span>THIS<span class="demi">YEAR</span></span>
+				</div>
+				
+        	</div>
+        </div>
+        <div id="ieMode">
+        	
+        </div> 
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+		<script defer src="js/vendor/soundjs/soundjs-0.3.0.min.js"></script> 
+		<script defer src="js/vendor/preloadjs-0.2.0.min.js"></script> 
+		<script defer src="js/vendor/easeljs/easeljs-0.5.0.min.js"></script> 
+		<script defer src="js/vendor/easeljs/filters/BoxBlurFilter.js"></script> 
+		<script defer src="js/vendor/greensock/easing/EasePack.min.js"></script> 
+		<script defer src="js/vendor/greensock/plugins/EaselPlugin.min.js"></script> 
+		<script defer src="js/vendor/greensock/plugins/BezierPlugin.min.js"></script> 
+		<script defer src="js/vendor/greensock/TweenMax.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/calendar.js"></script>
+        
+
+        <script>
+            var _gaq=[['_setAccount','UA-37575839-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
